@@ -1,3 +1,5 @@
+// Link: https://www.codewars.com/kata/520b9d2ad5c005041100000f/train/javascript
+
 /*
 Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
 
@@ -29,3 +31,13 @@ function pigIt(str) {
     let result = r.join(' ');
     return result;
 }
+
+// Tests.
+const Test = require('@codewars/test-compat');
+
+describe("Tests", () => {
+    it("test", () => {
+        Test.assertEquals(pigIt('Pig latin is cool'), 'igPay atinlay siay oolcay')
+        Test.assertEquals(pigIt('This is my string'), 'hisTay siay ymay tringsay')
+    });
+});
